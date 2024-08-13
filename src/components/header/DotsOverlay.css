@@ -1,0 +1,14 @@
+#dots-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -999;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(var(--num-cols), var(--dot-size));
+  grid-column-gap: var(--gutter);
+  grid-template-rows: repeat(var(--num-rows), var(--dot-size));
+  grid-row-gap: var(--gutter);
+}

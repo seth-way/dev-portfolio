@@ -4,8 +4,8 @@
   --bg-dark2: #404040;
   --bg-dark-gradient: linear-gradient(45deg, var(--bg-dark1), var(--bg-dark2));
 
-  --bg-light1: #fff;
-  --bg-light2: #d3d3d3;
+  --bg-light1: #fdfdfd;
+  --bg-light2: #f0f0f0;
   --bg-light-gradient: linear-gradient(45deg, var(--bg-dark1), var(--bg-dark2));
   /* text */
   --text-dark: #ffffff;
@@ -14,10 +14,10 @@
   --text-light: #000;
   --text-light-alt: #36454f;
   /* base colors */
-  --yellow: #f137a6;
+  --yellow: #fbe932;
   --green: #7ed21e;
   --purple: #b91fd1;
-  --blue: #fbe932;
+  --blue: #5c9eff;
   --red: #ff5c5c;
   --pink: #f137a6;
   /* theme colors */
@@ -48,6 +48,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--bg_C);
+  color: var(--text_C);
 }
 
 #root {

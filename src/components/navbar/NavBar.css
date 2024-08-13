@@ -1,0 +1,11 @@
+nav {
+  height: clamp(2rem, 10vh, 4rem);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background: var(--bg-2_C);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
