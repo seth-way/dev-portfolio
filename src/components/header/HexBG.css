@@ -1,0 +1,22 @@
+#hex-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -999;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  .hex-row {
+    display: inline-flex;
+    min-width: 100vw;
+    margin-top: var(--hex-offset);
+    flex-shrink: 0;
+  }
+
+  .hex-row:nth-child(odd) {
+    margin-left: calc(var(--hex-width) / -2);
+  }
+}

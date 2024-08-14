@@ -12,7 +12,7 @@ export default function NavBar() {
   return (
     <nav>
       {links.map(link => (
-        <button onClick={handleClick} value={link}>
+        <button onClick={handleClick} value={link} key={link}>
           {link}
         </button>
       ))}

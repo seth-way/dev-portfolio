@@ -54,6 +54,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: var(--bg_C);
   color: var(--text_C);
+  overflow-x: hidden;
 }
 
 #root {

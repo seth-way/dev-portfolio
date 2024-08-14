@@ -1,5 +1,6 @@
 import './header/Header.css';
-import ParticlesBG from './header/ParticlesBG';
+//import ParticlesBG from './header/ParticlesBG';
+import HexBG from './header/HexBG';
 
 import gitHubLogo from '../assets/images/github.svg';
 import linkedinLogo from '../assets/images/linkedin.svg';
@@ -13,7 +14,7 @@ export default function Header() {
   const linkedInURL = `https://www.linkedin.com/in/${linkedIn}`;
 
   return (
-    <header id="home">
+    <header id='home'>
       <h1 data-name={firstName}>{firstName}</h1>
       <p>{role}.</p>
       <div id='social-links'>
@@ -34,7 +35,7 @@ export default function Header() {
           <img src={linkedinLogo} alt='linkedIn logo' />
         </a>
       </div>
-      <ParticlesBG />
+      <HexBG />
     </header>
   );
 }
