@@ -20,11 +20,12 @@ function getActiveSection() {
 
 export default function NavBar() {
   const [currentSection, updateCurrent] = useState('home');
-  const ref = useRef(null);
+  const navRef = useRef(null);
+  const timerRef = useRef(null);
 
   useEffect(() => {
     updateCurrent(getActiveSection());
-    const { current } = ref;
+    const { current } = navRef;
     const hideNav = () => {
       if (window.scrollY) current.classList.add('hidden');
     };
@@ -38,18 +39,25 @@ export default function NavBar() {
       updateCurrent(getActiveSection());
     };
 
+    const handleScrollEnd = () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+      timerRef.current = setTimeout(() => {
+        hideNav();
+      }, 500);
+    };
+
     const handleMouseMove = e => {
       if (e.clientY < 100) unhideNav();
       else hideNav();
     };
 
     window.onscroll = handleScroll;
-    window.onscrollend = hideNav;
+    window.onscrollend = handleScrollEnd;
     window.onmousemove = handleMouseMove;
 
     return () => {
-      window.removeEventListener('scroll', hideNav);
-      window.removeEventListener('scrollend', unhideNav);
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scrollend', handleScrollEnd);
       window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
@@ -61,7 +69,7 @@ export default function NavBar() {
   };
 
   return (
-    <nav ref={ref}>
+    <nav ref={navRef}>
       {links.map(link => (
         <button
           onClick={handleClick}
