@@ -1,5 +1,5 @@
 import './header/Header.css';
-import DotsOverlay from './header/DotsOverlay';
+import ParticlesBG from './header/ParticlesBG';
 
 import gitHubLogo from '../assets/images/github.svg';
 import linkedinLogo from '../assets/images/linkedin.svg';
@@ -14,7 +14,7 @@ export default function Header() {
 
   return (
     <header>
-      <h1>{firstName}</h1>
+      <h1 data-name={firstName}>{firstName}</h1>
       <p>{role}.</p>
       <div id='social-links'>
         <a
@@ -34,7 +34,7 @@ export default function Header() {
           <img src={linkedinLogo} alt='linkedIn logo' />
         </a>
       </div>
-      <DotsOverlay />
+      <ParticlesBG />
     </header>
   );
 }
