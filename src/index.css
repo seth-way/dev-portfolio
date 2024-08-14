@@ -1,13 +1,61 @@
+:root {
+  /* background */
+  --bg-dark1: #181818;
+  --bg-dark2: #404040;
+  --bg-dark-gradient: linear-gradient(45deg, var(--bg-dark1), var(--bg-dark2));
+
+  --bg-light1: #fdfdfd;
+  --bg-light2: #f0f0f0;
+  --bg-light-gradient: linear-gradient(
+    45deg,
+    var(--bg-light1),
+    var(--bg-light2)
+  );
+  /* text */
+  --text-dark: #ffffff;
+  --text-dark-alt: #b3b3b3;
+
+  --text-light: #000;
+  --text-light-alt: #36454f;
+  /* base colors */
+  --yellow: #fbe932;
+  --green: #7ed21e;
+  --purple: #b91fd1;
+  --blue: #5c9eff;
+  --red: #ff5c5c;
+  --pink: #f137a6;
+  /* theme colors */
+  --primary-dark: var(--yellow);
+  --secondary-dark: var(--pink);
+  --accent-dark: var(--blue);
+
+  --primary-light: var(--red);
+  --secondary-light: var(--blue);
+  --accent-light: var(--green);
+
+  /* app colors */
+  --bg_C: var(--bg-dark1);
+  --bg-2_C: var(--bg-dark2);
+  --text_C: var(--text-dark);
+  --text-2_C: var(--text-dark-alt);
+  --primary_C: var(--primary-dark);
+  --secondary_C: var(--secondary-dark);
+  --accent_C: var(--accent-dark);
+  --gradient: var(--bg-dark-gradient);
+}
+
 body {
   margin: 0;
+  width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--bg_C);
+  color: var(--text_C);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  width: 100%;
 }

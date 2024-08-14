@@ -1,0 +1,109 @@
+#particles-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -999;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter);
+  --half-size: calc(var(--p-size) / 2);
+  --neg-size: calc(var(--p-size) * -1);
+
+  .particle-row {
+    display: flex;
+    width: 100vw;
+    gap: var(--gutter);
+
+    .particle {
+      /* display: block;
+      width: var(--p-size);
+      height: var(--p-size);
+      background: gray;
+      border-radius: 50%;
+      opacity: 0.3; */
+      /*       arcs
+      width: var(--p-size);
+      height: var(--p-size);
+      overflow: hidden;
+      position: relative; */
+
+      -webkit-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      transition: all 0.5s;
+
+      width: 0;
+      height: 0;
+      border: var(--p-size) solid transparent;
+      border-bottom-color: var(--text-2_C);
+      position: relative;
+      top: var(--neg-size);
+    }
+    .particle:after {
+      content: '';
+      position: absolute;
+      left: var(--neg-size);
+      top: var(--p-size);
+      width: 0;
+      height: 0;
+      border: var(--p-size) solid transparent;
+      border-top-color: var(--text-2_C);
+    }
+    /* ARCS
+    .particle:before {
+      content: '';
+      display: block;
+      width: 200%;
+      height: 200%;
+      position: absolute;
+      border-radius: 50%;
+    } */
+  }
+  /* ARCS
+   .particle-row:nth-child(even) {
+    .particle:nth-child(even):before {
+      bottom: 0;
+      right: 0;
+      box-shadow: var(--half-size) var(--half-size) 0 0 gray;
+    }
+    .particle:nth-child(odd):before {
+      bottom: 0;
+      left: 0;
+      box-shadow: var(--neg-size) var(--half-size) 0 0 gray;
+    }
+  }
+  .particle-row:nth-child(odd) {
+    .particle:nth-child(even):before {
+      top: 0;
+      right: 0;
+      box-shadow: var(--half-size) var(--neg-size) 0 0 gray;
+    }
+    .particle:nth-child(odd):before {
+      top: 0;
+      left: 0;
+      box-shadow: var(--neg-size) var(--neg-size) 0 0 gray;
+    }
+  } */
+}
+
+@keyframes animateParticleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) translateY(-8px) translateX(-8px);
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes fader {
+  0% {
+    opacity: 5%;
+  }
+  100% {
+    opacity: 1%;
+  }
+}
