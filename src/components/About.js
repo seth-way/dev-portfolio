@@ -2,6 +2,7 @@ import './about/About.css';
 import { useEffect, useRef } from 'react';
 import headShot from '../assets/images/headShot.jpg';
 import resumeInfo from '../assets/resume-info.json';
+import resume from '../assets/resume.pdf';
 
 export default function About() {
   const { bio, email, phone, address } = resumeInfo.background;
@@ -19,6 +20,7 @@ export default function About() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
   return (
     <section id='about' ref={ref}>
       <div>
@@ -40,9 +42,11 @@ export default function About() {
           <p>email: {email}</p>
         </section>
         <section>
-          <button className='hover-highlight'>
-            <span>Download Resume</span>
-          </button>
+          <a href={resume} download>
+            <button className='hover-highlight'>
+              <span>Download Resume</span>
+            </button>
+          </a>
         </section>
       </div>
     </section>
