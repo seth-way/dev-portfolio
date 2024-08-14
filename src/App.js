@@ -2,6 +2,7 @@ import './App.css';
 import NavBar from './components/NavBar';
 import Header from './components/Header';
 import About from './components/About';
+import Projects from './components/Projects';
 import { useRef } from 'react';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <NavBar />
       <Header />
       <About />
+      <Projects />
     </div>
   );
 }

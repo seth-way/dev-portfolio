@@ -35,11 +35,18 @@ export default function About() {
       <div>
         <section>
           <h3>Contact Details</h3>
-          <p>phone: {phone}</p>
           <p>
-            address: {city}, {state}
+            phone: <b>{phone}</b>
           </p>
-          <p>email: {email}</p>
+          <p>
+            address:{' '}
+            <b>
+              {city}, {state}
+            </b>
+          </p>
+          <p>
+            email: <b>{email}</b>
+          </p>
         </section>
         <section>
           <a href={resume} download>

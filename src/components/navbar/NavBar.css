@@ -9,6 +9,7 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  transition: top 0.25s ease-in-out;
 
   button {
     text-transform: uppercase;
@@ -16,4 +17,13 @@ nav {
     background: transparent;
     color: var(--text_C);
   }
+
+  button.current {
+    font-weight: bold;
+    color: var(--primary_C);
+  }
+}
+
+nav.hidden {
+  top: -4rem;
 }
