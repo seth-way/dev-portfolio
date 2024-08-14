@@ -3,17 +3,17 @@ import ParticlesBG from './header/ParticlesBG';
 
 import gitHubLogo from '../assets/images/github.svg';
 import linkedinLogo from '../assets/images/linkedin.svg';
-import userInfo from '../assets/resume-info.json';
+import resumeInfo from '../assets/resume-info.json';
 
 export default function Header() {
-  const { name, role } = userInfo.background;
-  const { github, linkedIn } = userInfo.socials;
+  const { name, role } = resumeInfo.background;
+  const { github, linkedIn } = resumeInfo.socials;
   const firstName = name.split(' ')[0];
   const githubURL = `https://github.com/${github}`;
   const linkedInURL = `https://www.linkedin.com/in/${linkedIn}`;
 
   return (
-    <header>
+    <header id="home">
       <h1 data-name={firstName}>{firstName}</h1>
       <p>{role}.</p>
       <div id='social-links'>

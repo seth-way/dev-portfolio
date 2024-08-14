@@ -13,6 +13,7 @@ export default function DarkModeToggle() {
       '--primary_C': `var(--primary-${newMode})`,
       '--secondary_C': `var(--secondary-${newMode})`,
       '--accent_C': `var(--accent-${newMode})`,
+      '--gradient': `var(--bg-${newMode}-gradient)`,
     };
 
     Object.entries(styleUpdates).forEach(([prop, val]) => {
