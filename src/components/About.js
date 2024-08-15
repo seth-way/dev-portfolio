@@ -23,7 +23,7 @@ export default function About() {
 
   return (
     <section id='about' ref={ref}>
-      <div>
+      <div className='content'>
         <div id='profilePicBorder'>
           <img src={headShot} alt='professional headshot' />
         </div>
@@ -32,7 +32,7 @@ export default function About() {
           <p>{bio}</p>
         </section>
       </div>
-      <div>
+      <div className='content'>
         <section>
           <h3>Contact Details</h3>
           <p>

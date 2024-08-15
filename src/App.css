@@ -9,6 +9,10 @@
     color: var(--accent_C);
   }
 
+  .content {
+    max-width: 900px;
+  }
+
   a:hover,
   button:hover {
     cursor: pointer;
