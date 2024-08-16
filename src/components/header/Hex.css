@@ -5,15 +5,15 @@
   transform-origin: center;
 
   > :nth-child(1) {
-    opacity: 0;
+    opacity: 4%;
     animation: 1s fader var(--delay) ease-in-out alternate infinite;
   }
   > :nth-child(2) {
-    opacity: 0;
+    opacity: 4%;
     animation: 1s fader calc(var(--delay) + 0.2s) ease-in-out alternate infinite;
   }
   > :nth-child(3) {
-    opacity: 0;
+    opacity: 4%;
     animation: 1s fader calc(var(--delay) + 0.4s) ease-in-out alternate infinite;
   }
 }
