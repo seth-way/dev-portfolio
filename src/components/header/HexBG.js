@@ -26,7 +26,7 @@ export default function HexBG() {
   }, [numRows, numCols]);
 
   return (
-    <div id='hex-bg' ref={gridRef}>
+    <div id='hex-bg' ref={gridRef} aria-hidden='true'>
       {Array(numRows)
         .fill(null)
         .map((_row, row) => (
