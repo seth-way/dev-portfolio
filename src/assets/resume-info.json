@@ -2,7 +2,6 @@
   "background": {
     "name": "Seth Way",
     "role": "Software Developer",
-    "description": "Software Engineer & Military Veteran. Currently looking for a positive and engaging team where I can contribute while continuing to learn and grow",
     "image": "headShot.jpg",
     "bio": "In 2019 I honorably completed my Military Service. Since then I’ve graduated from the Microsoft Software & Systems Academy and attended the Turing School, one of the nation’s leading Software Engineering bootcamps. I’ve learned the basics and some highly advanced concepts in several programming languages. I've put those skills to use to create interesting and useful tools. I’ve met project deadlines while working with teams of incredibly talented individuals. I’m excited and motivated to take on the next challenge.",
     "email": "way.sethaniel@gmail.com",
@@ -17,5 +16,38 @@
   "socials": {
     "github": "seth-way",
     "linkedIn": "sethway"
-  }
+  },
+  "projects": [
+    {
+      "title": "Overlook Hotel",
+      "description": "A hotel management tool for hotel customers to manage room bookings and calculate bills.",
+      "preview": "overlook-preview.gif",
+      "contributors": [],
+      "tech": ["js", "css", "html"],
+      "notes": [
+        "In order to deploy this UI to github pages the locally running API also had to be deployed. I worked through this process and tracked my steps in a public gist so that my classmates and myself have access to a working example tutorial.",
+        "The finished product is not only mobile friendly, but also received a 100 accessibility score from Google Lighthouse."
+      ],
+      "links": {
+        "repo": "https://github.com/seth-way/Overlook-Hotel",
+        "live": "https://seth-way.github.io/Overlook-Hotel/"
+      }
+    },
+    {
+      "title": "Rock · Paper · Scissors",
+      "description": "This project will be a learning tool to demonstrate my understanding of writing DRY JavaScript, properly utilizing event delegation & utilizing CSS to create a clean & intuitive user experience.",
+      "preview": "rps.gif",
+      "contributors": [],
+      "tech": ["js", "css", "html"],
+      "notes": [
+        "This project challenged my understanding of CSS animations & async delays. It was difficult, but rewarding to create a seamless UX, while keeping possible bugs out of the DOM during delays.",
+        "This is the most complex CSS I have built to date & required research in CSS variables, color blending, @keyframe animations, transitions & layering through absolute-positioning. I'm very pleased with the final product.",
+        "The 'console' was a complicated & layered element that required careful planning & manipulation to create. Parts needed to be hidden & cursor events disabled as necessary to eliminate unwanted DOM activities."
+      ],
+      "links": {
+        "repo": "https://github.com/seth-way/rock-paper-scissors",
+        "live": "https://seth-way.github.io/rock-paper-scissors/"
+      }
+    }
+  ]
 }
