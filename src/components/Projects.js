@@ -9,7 +9,7 @@ export default function Projects() {
   const [isOpen, setDrawer] = useState(false);
 
   const projects = resumeInfo.projects.map((project, idx) => {
-    project.id = idx + '_' + project.title.replaceAll(' ', '_');
+    project.id = idx + '_' + project.short;
     return project;
   });
 

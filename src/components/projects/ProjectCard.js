@@ -1,6 +1,6 @@
 import './ProjectCard.css';
 import { useRef } from 'react';
-import TechIcon from './TechIcon';
+import IMG from '../ui/IMG';
 
 export default function ProjectCard({ id, title, tech, openDrawer }) {
   const ref = useRef(null);
@@ -42,7 +42,12 @@ export default function ProjectCard({ id, title, tech, openDrawer }) {
         <h3>{title}</h3>
         <div className='tech-used'>
           {tech.map((type, i) => (
-            <TechIcon tech={type} key={`${i}-${type}`} />
+            <IMG
+              folder='tech'
+              filename={`${type}.svg`}
+              alt={`${type} badge logo`}
+              key={`${i}-${type}`}
+            />
           ))}
         </div>
       </div>

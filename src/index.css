@@ -2,15 +2,11 @@
   /* background */
   --bg-dark1: #181818;
   --bg-dark2: #23272f;
-  --bg-dark-gradient: linear-gradient(45deg, var(--bg-dark1), var(--bg-dark2));
+  --bg-dark-gradient: linear-gradient(var(--bg-dark1), var(--bg-dark2));
 
   --bg-light1: #fdfdfd;
   --bg-light2: #f0f0f0;
-  --bg-light-gradient: linear-gradient(
-    45deg,
-    var(--bg-light1),
-    var(--bg-light2)
-  );
+  --bg-light-gradient: linear-gradient(var(--bg-light1), var(--bg-light2));
   /* text */
   --text-dark: #ffffff;
   --text-dark-alt: #b3b3b3;

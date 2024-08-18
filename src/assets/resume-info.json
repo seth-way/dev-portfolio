@@ -20,8 +20,8 @@
   "projects": [
     {
       "title": "Overlook Hotel",
+      "short": "overlook",
       "description": "A hotel management tool for hotel customers to manage room bookings and calculate bills.",
-      "preview": "overlook-preview.gif",
       "contributors": [],
       "tech": ["js", "css", "html"],
       "notes": [
@@ -35,8 +35,8 @@
     },
     {
       "title": "Rock · Paper · Scissors",
+      "short": "rps",
       "description": "This project will be a learning tool to demonstrate my understanding of writing DRY JavaScript, properly utilizing event delegation & utilizing CSS to create a clean & intuitive user experience.",
-      "preview": "rps.gif",
       "contributors": [],
       "tech": ["js", "css", "html"],
       "notes": [
