@@ -46,6 +46,16 @@
   --max-w-content: 900px;
 }
 
+*::-webkit-scrollbar {
+  background-color: var(--bg_C);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--bg_C);
+  box-shadow: inset rgb(from var(--text_C) r g b / 40%) 0 0 0.1rem 0.05rem,
+    rgb(from var(--text-2_C) r g b / 40%) 0 0 0.5rem 0.1rem;
+}
+
 body {
   margin: 0;
   width: 100%;
@@ -56,16 +66,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: var(--bg_C);
   color: var(--text_C);
-
-  &::-webkit-scrollbar {
-    background-color: var(--bg_C);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: var(--bg_C);
-    box-shadow: inset rgb(from var(--text_C) r g b / 40%) 0 0 0.1rem 0.05rem,
-      rgb(from var(--text-2_C) r g b / 40%) 0 0 0.5rem 0.1rem;
-  }
 }
 
 #root {
