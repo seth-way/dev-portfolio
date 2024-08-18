@@ -1,10 +1,16 @@
 #projects {
   padding: 2rem 0;
   background: var(--bg-2_C);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   #project-cards {
+    margin: 2rem 0;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    width: clamp(200px, 90vw, var(--max-w-content));
   }
 }

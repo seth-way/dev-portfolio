@@ -22,8 +22,6 @@
   --link: hsl(var(--canvas), 90%, 80%);
   --linkh: hsl(150, 95%, 70%);
   --wgt: 200;
-  --ar: 0.718;
-  --br: 4.55% / 3.5%;
   --hl: 0;
   --bg: hsl(var(--canvas), 15%, 12%);
   --t: all 0.66s
@@ -50,19 +48,10 @@
       0.997 73%,
       1
     );
-  * {
-    font-family: 'Roboto', sans-serif;
-    font-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  width: 15em;
-  aspect-ratio: var(--ar);
-  border-radius: var(--br);
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  grid-template-rows: minmax(0, 1fr);
+  padding: 0.25rem;
+  width: clamp(8rem, 15vw, 15rem);
+  aspect-ratio: 7 / 9;
+  border-radius: 5%;
   position: relative;
   background-size: 100% 100%;
   background-position: 0px 0px, 0px 0px, 0px 0px, 50% 50%, 0px 0px, 0px 0px;
@@ -97,6 +86,15 @@
   animation: glow-bg 44s linear infinite;
   transform: translate3d(0, 0, 0.1px);
   z-index: 1;
+
+  h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-wrap: balance;
+    text-align: center;
+    color: var(--primary_C);
+  }
 }
 .card:hover {
   --hl: 1;
@@ -119,7 +117,7 @@
   border-radius: inherit;
   overflow: hidden;
   justify-content: space-around;
-  background: hsl(var(--canvas), 15%, 16%);
+  background: var(--bg_C);
   z-index: 2;
 }
 
@@ -142,7 +140,7 @@
   background: inherit;
   inset: -10px;
   scale: 0.8;
-  filter: blur(36px) brightness(1) contrast(0.85) saturate(1.4);
+  filter: blur(36px) brightness(1) contrast(0.5) saturate(1.2);
   z-index: 0;
   transition: var(--t);
 }
@@ -165,10 +163,10 @@
   flex-wrap: wrap-reverse;
   align-items: flex-start;
   justify-content: center;
-  gap: 1em;
+  gap: clamp(0.3rem, 1.5vw, 1rem);
 
   img {
-    height: 3em;
+    height: clamp(1.5rem, 3vw, 3rem);
     width: auto;
   }
 }

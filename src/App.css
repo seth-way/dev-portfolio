@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  overflowx: hidden;
+  overflow-x: hidden;
 
   h2,
   h3 {
@@ -9,7 +9,7 @@
   }
 
   .content {
-    max-width: 900px;
+    max-width: var(--max-w-content);
   }
 
   a:hover,

@@ -17,5 +17,5 @@ export default function TechIcon({ tech }) {
     importSVG();
   }, [tech]);
 
-  return SVG ? <img src={SVG} alt={tech} /> : null;
+  return SVG ? <img src={SVG} alt={`${tech} badge logo`} /> : null;
 }
