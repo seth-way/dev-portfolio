@@ -5,7 +5,6 @@
   h2,
   h3 {
     text-transform: uppercase;
-    font-weight: 500;
     color: var(--accent_C);
   }
 

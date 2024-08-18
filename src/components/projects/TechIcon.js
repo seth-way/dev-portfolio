@@ -6,15 +6,16 @@ export default function TechIcon({ tech }) {
 
   useEffect(() => {
     const importSVG = async () => {
-      const techSVG = await import(`../../assets/images/tech/${tech}.svg`);
-      console.log('1:', techSVG);
-      console.log('default:', techSVG.default);
-      setSVG(() => techSVG.default);
-      console.log('svg set...');
+      try {
+        const techSVG = await import(`../../assets/images/tech/${tech}.svg`);
+        setSVG(() => techSVG.default);
+      } catch (error) {
+        console.warn(`Error loading SVG: ${tech}.svg`, error);
+      }
     };
 
     importSVG();
   }, [tech]);
 
-  return SVG ? <SVG /> : null;
+  return SVG ? <img src={SVG} alt={tech} /> : null;
 }

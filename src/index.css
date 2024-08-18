@@ -1,7 +1,7 @@
 :root {
   /* background */
   --bg-dark1: #181818;
-  --bg-dark2: #404040;
+  --bg-dark2: #23272F;
   --bg-dark-gradient: linear-gradient(45deg, var(--bg-dark1), var(--bg-dark2));
 
   --bg-light1: #fdfdfd;
