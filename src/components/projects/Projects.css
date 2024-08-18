@@ -1,4 +1,10 @@
 #projects {
   padding: 2rem 0;
   background: var(--bg-2_C);
+
+  #project-cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 }

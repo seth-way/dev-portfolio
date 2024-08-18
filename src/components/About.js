@@ -3,10 +3,10 @@ import { useEffect, useRef } from 'react';
 import headShot from '../assets/images/headShot.jpg';
 import resumeInfo from '../assets/resume-info.json';
 import resume from '../assets/resume.pdf';
+const { bio, email, phone, address } = resumeInfo.background;
+const { city, state } = address;
 
 export default function About() {
-  const { bio, email, phone, address } = resumeInfo.background;
-  const { city, state } = address;
   const ref = useRef(null);
   useEffect(() => {
     const { current } = ref;
