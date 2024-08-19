@@ -48,7 +48,8 @@
       0.997 73%,
       1
     );
-  padding: 0.25rem;
+  padding: 0.35rem;
+  margin: 0.5rem 0.25rem;
   width: clamp(8rem, 15vw, 15rem);
   aspect-ratio: 7 / 9;
   border-radius: 5%;
@@ -89,7 +90,7 @@
 
   h3 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: clamp(0.75rem, 2vw, 1.5rem);
     font-weight: 400;
     text-wrap: balance;
     text-align: center;
@@ -159,6 +160,7 @@
 
 .tech-used {
   height: 30%;
+  width: 95%;
   display: flex;
   flex-wrap: wrap-reverse;
   align-items: flex-start;

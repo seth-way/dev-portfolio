@@ -21,6 +21,11 @@ export default function About() {
     };
   }, []);
 
+  const handleClick = e => {
+    navigator.clipboard.writeText(e.currentTarget.innerText);
+    e.currentTarget.focus();
+  };
+
   return (
     <section id='about' ref={ref}>
       <div className='content'>
@@ -36,7 +41,7 @@ export default function About() {
         <section>
           <h3>Contact Details</h3>
           <p>
-            phone: <b>{phone}</b>
+            phone: <button onClick={handleClick}>{phone}</button>
           </p>
           <p>
             address:{' '}
@@ -45,7 +50,7 @@ export default function About() {
             </b>
           </p>
           <p>
-            email: <b>{email}</b>
+            email: <button onClick={handleClick}>{email}</button>
           </p>
         </section>
         <section>
