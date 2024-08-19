@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdev_portfolio=self.webpackChunkdev_portfolio||[]).push([[184],{184:(e,o,i)=>{e.exports=i.p+"static/media/cookin.46a6769c63910afb2853.gif"}}]);
