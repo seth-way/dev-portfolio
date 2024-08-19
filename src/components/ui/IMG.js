@@ -8,7 +8,6 @@ export default function IMG({ folder, filename, alt }) {
         const newImage = await import(
           `../../assets/images/${folder}/${filename}`
         );
-        console.log('NEW IMAGE:', newImage);
         setImage(() => newImage.default);
       } catch (error) {
         console.warn(`Error loading image: ${filename}`, error);

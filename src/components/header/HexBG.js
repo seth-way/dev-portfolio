@@ -12,7 +12,7 @@ export default function HexBG() {
   );
   const hexOffset = (hexHeight - hexSide) / 2;
 
-  const numCols = Math.ceil(width / hexWidth);
+  const numCols = Math.ceil(width / hexWidth) + 1;
   const numRows = Math.ceil(height / (hexHeight + hexSide)) * 2 + 1;
 
   useEffect(() => {
