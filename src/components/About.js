@@ -3,10 +3,10 @@ import { useEffect, useRef } from 'react';
 import headShot from '../assets/images/headShot.jpg';
 import resumeInfo from '../assets/resume-info.json';
 import resume from '../assets/resume.pdf';
+const { bio, email, phone, address } = resumeInfo.background;
+const { city, state } = address;
 
 export default function About() {
-  const { bio, email, phone, address } = resumeInfo.background;
-  const { city, state } = address;
   const ref = useRef(null);
   useEffect(() => {
     const { current } = ref;
@@ -21,9 +21,14 @@ export default function About() {
     };
   }, []);
 
+  const handleClick = e => {
+    navigator.clipboard.writeText(e.currentTarget.innerText);
+    e.currentTarget.focus();
+  };
+
   return (
     <section id='about' ref={ref}>
-      <div>
+      <div className='content'>
         <div id='profilePicBorder'>
           <img src={headShot} alt='professional headshot' />
         </div>
@@ -32,14 +37,21 @@ export default function About() {
           <p>{bio}</p>
         </section>
       </div>
-      <div>
+      <div className='content'>
         <section>
           <h3>Contact Details</h3>
-          <p>phone: {phone}</p>
           <p>
-            address: {city}, {state}
+            phone: <button onClick={handleClick}>{phone}</button>
           </p>
-          <p>email: {email}</p>
+          <p>
+            address:{' '}
+            <b>
+              {city}, {state}
+            </b>
+          </p>
+          <p>
+            email: <button onClick={handleClick}>{email}</button>
+          </p>
         </section>
         <section>
           <a href={resume} download>

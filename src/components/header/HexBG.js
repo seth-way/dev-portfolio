@@ -12,7 +12,7 @@ export default function HexBG() {
   );
   const hexOffset = (hexHeight - hexSide) / 2;
 
-  const numCols = Math.ceil(width / hexWidth);
+  const numCols = Math.ceil(width / hexWidth) + 1;
   const numRows = Math.ceil(height / (hexHeight + hexSide)) * 2 + 1;
 
   useEffect(() => {
@@ -26,7 +26,7 @@ export default function HexBG() {
   }, [numRows, numCols]);
 
   return (
-    <div id='hex-bg' ref={gridRef}>
+    <div id='hex-bg' ref={gridRef} aria-hidden='true'>
       {Array(numRows)
         .fill(null)
         .map((_row, row) => (

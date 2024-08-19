@@ -6,13 +6,13 @@ import gitHubLogo from '../assets/images/github.svg';
 import linkedinLogo from '../assets/images/linkedin.svg';
 import resumeInfo from '../assets/resume-info.json';
 
-export default function Header() {
-  const { name, role } = resumeInfo.background;
-  const { github, linkedIn } = resumeInfo.socials;
-  const firstName = name.split(' ')[0];
-  const githubURL = `https://github.com/${github}`;
-  const linkedInURL = `https://www.linkedin.com/in/${linkedIn}`;
+const { name, role } = resumeInfo.background;
+const { github, linkedIn } = resumeInfo.socials;
+const firstName = name.split(' ')[0];
+const githubURL = `https://github.com/${github}`;
+const linkedInURL = `https://www.linkedin.com/in/${linkedIn}`;
 
+export default function Header() {
   return (
     <header id='home'>
       <h1 data-name={firstName}>{firstName}</h1>

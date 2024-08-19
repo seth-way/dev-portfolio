@@ -3,12 +3,13 @@ nav {
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: 5;
   background: var(--bg-2_C);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  transition: top 0.25s ease-in-out;
 
   button {
     text-transform: uppercase;
@@ -16,4 +17,13 @@ nav {
     background: transparent;
     color: var(--text_C);
   }
+
+  button.current {
+    font-weight: bold;
+    color: var(--primary_C);
+  }
+}
+
+nav.hidden {
+  top: -4rem;
 }

@@ -1,6 +1,16 @@
 .App {
   text-align: center;
-  overflowx: hidden;
+  overflow-x: hidden;
+
+  h2,
+  h3 {
+    text-transform: uppercase;
+    color: var(--accent_C);
+  }
+
+  .content {
+    max-width: var(--max-w-content);
+  }
 
   a:hover,
   button:hover {

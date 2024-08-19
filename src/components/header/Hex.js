@@ -1,6 +1,6 @@
 import './Hex.css';
 import { useEffect, useRef } from 'react';
-import { ReactComponent as SvgIcon } from '../../assets/images/hex.svg';
+import { ReactComponent as HexSVG } from '../../assets/images/hex.svg';
 
 export default function Hex({ row, col, width, height }) {
   const ref = useRef(null);
@@ -10,5 +10,5 @@ export default function Hex({ row, col, width, height }) {
     current.style.setProperty('--delay', delay + 's');
   });
 
-  return <SvgIcon className='hex' ref={ref} width={width} height={height} />;
+  return <HexSVG className='hex' ref={ref} width={width} height={height} />;
 }

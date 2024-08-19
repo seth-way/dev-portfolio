@@ -1,16 +1,12 @@
 :root {
   /* background */
   --bg-dark1: #181818;
-  --bg-dark2: #404040;
-  --bg-dark-gradient: linear-gradient(45deg, var(--bg-dark1), var(--bg-dark2));
+  --bg-dark2: #23272f;
+  --bg-dark-gradient: linear-gradient(var(--bg-dark1), var(--bg-dark2));
 
   --bg-light1: #fdfdfd;
   --bg-light2: #f0f0f0;
-  --bg-light-gradient: linear-gradient(
-    45deg,
-    var(--bg-light1),
-    var(--bg-light2)
-  );
+  --bg-light-gradient: linear-gradient(var(--bg-light1), var(--bg-light2));
   /* text */
   --text-dark: #ffffff;
   --text-dark-alt: #b3b3b3;
@@ -42,9 +38,23 @@
   --secondary_C: var(--secondary-dark);
   --accent_C: var(--accent-dark);
   --gradient: var(--bg-dark-gradient);
+  /* sizing */
+  --max-w-content: 900px;
+}
+
+*::-webkit-scrollbar {
+  background-color: var(--bg_C);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--bg_C);
+  box-shadow: inset rgb(from var(--text_C) r g b / 40%) 0 0 0.1rem 0.05rem,
+    rgb(from var(--text-2_C) r g b / 40%) 0 0 0.5rem 0.1rem;
 }
 
 body {
+  --sw-default: clamp(0.3rem, 5vw, 1rem);
+  --sw: var(--sw-default);
   margin: 0;
   width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -54,7 +64,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: var(--bg_C);
   color: var(--text_C);
-  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sw);
 }
 
 #root {
